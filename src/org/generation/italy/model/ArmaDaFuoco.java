@@ -33,7 +33,7 @@ public abstract class ArmaDaFuoco {
 		return ("Caricatore cambiato! Colpi rimanenti: "+colpiRimasti);
 	}
 	
-	protected String spara(int colpi) {
+	protected String spara(int colpi) {//metodo che spara se i colpi nel caricatore ci sono
 		for (int i=0; i<colpi; i++)
 		{
 			if (colpiRimasti>0)

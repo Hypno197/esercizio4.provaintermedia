@@ -32,6 +32,8 @@ public class Main {
 		arma.setModello(sc.nextLine());
 		System.out.println("Calibro dell'arma: ");
 		arma.setCalibro(sc.nextLine());
+		//fork in base all'istanza
+		//pistola
 		if (arma instanceof Pistola) {
 			Pistola pistola = (Pistola) arma;
 			arma.setCapienzaCaricatore(11);
@@ -41,6 +43,7 @@ public class Main {
 			pistola.setMirino(sc.nextLine());
 			poligono.add(pistola);
 			System.out.println(arma.toString());
+			//fucile
 		} else if (arma instanceof FucileAssalto) {
 			FucileAssalto fucile = (FucileAssalto) arma;
 			arma.setCapienzaCaricatore(30);
@@ -56,6 +59,7 @@ public class Main {
 			System.out.println(arma.toString());
 		}
 		do {
+			//metodi per usare le armi
 			esci = false;
 			System.out.println("Cosa vuoi fare con l'arma?");
 			System.out.println("0) Esci");
@@ -89,7 +93,7 @@ public class Main {
 				break;
 			}
 			case 3 :{
-				if (arma instanceof Pistola) {
+				if (arma instanceof Pistola) {//differenza estrazione/sicura
 				((Pistola)arma).estrazione();
 				if (((Pistola) arma).isEstratta()) {
 					System.out.println("Pistola estratta!");
@@ -102,7 +106,7 @@ public class Main {
 				}
 				break;
 			}
-			case 4 :{
+			case 4 :{//solo per fucile, inserisci sicura e modifica selettore
 				if (arma instanceof FucileAssalto) {
 					((FucileAssalto) arma).mettiSicura(true);
 					System.out.println("Sicura inserita.");

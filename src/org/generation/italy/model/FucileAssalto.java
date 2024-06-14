@@ -43,14 +43,8 @@ public class FucileAssalto extends ArmaDaFuoco {
 		this.canna = canna;
 	}
 
-//	public boolean isSicura() {
-//		if (selettoreFuoco == 0)
-//			return sicura = true;
-//		else
-//			return sicura = false;
-//	}
 
-	public String getSelettoreFuoco() {
+	public String getSelettoreFuoco() {//selettore di fuoco per l'arma, 0 non spara, 1 spara un solo colpo, 2 spara quanti colpi si vuole
 		if (selettoreFuoco == 0)
 			return "sicura";
 		else if (selettoreFuoco == 1)
@@ -59,7 +53,7 @@ public class FucileAssalto extends ArmaDaFuoco {
 			return "Automatico";
 	}
 
-	public String setSelettoreFuoco(int selettoreFuoco) {
+	public String setSelettoreFuoco(int selettoreFuoco) {//posizione del selettore, può essere 0/1/2
 		if (selettoreFuoco < 3) {
 			this.selettoreFuoco = selettoreFuoco;
 			return getSelettoreFuoco();
@@ -73,7 +67,7 @@ public class FucileAssalto extends ArmaDaFuoco {
 		selettoreFuoco = 0;
 	}
 
-	public String premiGrilletto(int colpi) {
+	public String premiGrilletto(int colpi) {//prova a sparare 
 		if (this.selettoreFuoco==2)
 			return spara(colpi);
 		else if (this.selettoreFuoco==1)

@@ -20,7 +20,7 @@ public class Pistola extends ArmaDaFuoco {
 		this.mirino = mirino;
 	}
 
-	public String premiGrilletto() {
+	public String premiGrilletto() {//prova a sparare se la pistola è estratta
 		if (this.isEstratta())
 			return spara(1);
 		else
@@ -31,7 +31,7 @@ public class Pistola extends ArmaDaFuoco {
 		return estratta;
 	}
 
-	public void estrazione() {
+	public void estrazione() {//se la pistola è estratta la ripone o viceversa
 		if(this.estratta)
 		this.estratta = false;
 		else 
