@@ -105,6 +105,7 @@ public class Main {
 			case 4 :{
 				if (arma instanceof FucileAssalto) {
 					((FucileAssalto) arma).mettiSicura(true);
+					System.out.println("Sicura inserita.");
 				}
 				break;
 			}
